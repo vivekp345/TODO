@@ -1,0 +1,8 @@
+# Ignore Node.js modules
+node_modules/
+
+# Ignore Firebase Admin SDK Service Account Key (VERY IMPORTANT!)
+ServiceAccountKey.json
+
+# You might also want to ignore environment variable files if you use them
+.env

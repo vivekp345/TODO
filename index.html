@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - ToDo App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Your To-Do List</h1>
+
+        <p id="motive-statement" class="motive-text"></p>
+
+        <div class="tab-nav">
+            <button id="active-tasks-tab" class="active-tab">Active Tasks</button>
+            <button id="completed-tasks-tab">Completed Tasks</button>
+        </div>
+
+        <div id="add-task-section">
+            <h2>Add New Task</h2>
+            <div id="message" class="message" style="display: none;"></div>
+            <div id="todo-input-group">
+                <input type="text" id="task-name" placeholder="Task Name" required>
+
+                <textarea id="task-description" placeholder="Task Description (Optional)"></textarea>
+
+                <input type="date" id="task-timeline" placeholder="Due Date" required>
+
+                <button id="add-todo-btn">Add Task</button>
+            </div>
+        </div>
+
+        <div id="task-lists-container">
+            <div id="active-tasks-list-container">
+                <ul id="active-todo-list">
+                </ul>
+            </div>
+            <div id="completed-tasks-list-container" style="display: none;">
+                <ul id="completed-todo-list">
+                </ul>
+            </div>
+        </div>
+
+        <button id="logout-btn" class="danger-btn">Logout</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>

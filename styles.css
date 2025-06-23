@@ -1,0 +1,614 @@
+/* public/styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    /* New Light Color Palette (keep as before) */
+    --bg-color-start: #e0f2f7;
+    /* Light Sky Blue */
+    --bg-color-end: #f9fbe7;
+    /* Light Pale Yellow */
+    --card-bg: rgba(255, 255, 255, 0.85);
+    /* More opaque white for cards */
+    --text-color: #333333;
+    /* Darker text for readability on light background */
+    --primary-color: #4CAF50;
+    /* Green */
+    --danger-color: #f44336;
+    /* Red */
+    --accent-color: #2196F3;
+    /* Blue accent for links/highlights */
+    --border-color: rgba(0, 0, 0, 0.1);
+    /* Subtle border for light theme */
+    --input-bg: #ffffff;
+    /* Solid white input background */
+    --shadow-light: rgba(0, 0, 0, 0.15);
+    /* Lighter shadows */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    /* Remove all body margins */
+    padding: 0;
+    /* Remove all body padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #8abaf9, #e76fee);
+        
+    color: var(--text-color);
+    line-height: 1.8;
+    overflow-x: hidden;
+    font-size: 20px;
+    /* Base font size increased even further */
+}
+
+.container {
+    background-color: var(--card-bg);
+    border-radius: 25px;
+    padding: 60px 80px;
+    /* Even more internal padding for a spacious feel */
+    box-shadow: 0 25px 50px var(--shadow-light);
+    width: 90%;
+    /* Use 90% of screen width */
+    max-width: 900px;
+    /* Allow wider containers on larger screens */
+    margin: 30px auto;
+    /* Keep a bit of vertical margin, center horizontally */
+    box-sizing: border-box;
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border-color);
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 40px;
+    /* Even more space below headings */
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    /* Maximize H1 size */
+}
+
+h2 {
+    font-size: 2.5rem;
+    /* Maximize H2 size */
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 12px;
+    /* More space between label and input */
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    /* Bigger labels */
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="date"],
+textarea {
+    /* Style textarea too */
+    width: 100%;
+    /* Take full width of parent */
+    padding: 20px;
+    /* Massive input fields */
+    margin-bottom: 30px;
+    /* More space below inputs */
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    /* More rounded inputs */
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    font-size: 1.3rem;
+    /* Bigger text inside inputs */
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+}
+
+textarea {
+    min-height: 150px;
+    /* Make description text area very big */
+    resize: vertical;
+    /* Allow vertical resizing */
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+    /* Focus style for textarea */
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 5px rgba(33, 150, 243, 0.4);
+    /* Stronger focus glow */
+}
+
+/* Placeholder styling for light theme */
+input::placeholder,
+textarea::placeholder {
+    color: rgba(51, 51, 51, 0.6);
+    opacity: 1;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 18px 30px;
+    /* Even bigger buttons */
+    border: none;
+    border-radius: 15px;
+    /* More rounded buttons */
+    cursor: pointer;
+    font-size: 1.3rem;
+    /* Bigger button text */
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    /* Stronger shadow */
+}
+
+button:hover {
+    background-color: #43A047;
+    /* Slightly darker green */
+    transform: translateY(-4px);
+    /* More pronounced lift */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.secondary-btn {
+    background-color: var(--accent-color);
+}
+
+.secondary-btn:hover {
+    background-color: #1976D2;
+}
+
+.danger-btn {
+    background-color: var(--danger-color);
+}
+
+.danger-btn:hover {
+    background-color: #D32F2F;
+}
+
+.text-center {
+    text-align: center;
+    margin-top: 40px;
+    /* More space */
+    font-size: 1.15rem;
+}
+
+.text-center a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.text-center a:hover {
+    color: #1976D2;
+}
+
+.message {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 18px;
+    /* Bigger message boxes */
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 1.15rem;
+    color: var(--text-color);
+}
+
+.message.error {
+    background-color: rgba(244, 67, 54, 0.18);
+    color: #C62828;
+}
+
+.message.success {
+    background-color: rgba(76, 175, 80, 0.18);
+    color: #2E7D32;
+}
+
+/* Motive statement styling */
+.motive-text {
+    text-align: center;
+    font-size: 1.5rem;
+    /* Even bigger motive text */
+    font-weight: 600;
+    color: #555555;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    /* Generous spacing */
+    font-style: italic;
+    line-height: 1.6;
+}
+
+/* --- Specific Task Input Group --- */
+#todo-input-group {
+    display: flex;
+    flex-direction: column;
+    /* Stack inputs vertically */
+    gap: 20px;
+    /* More space between stacked inputs */
+    margin-bottom: 40px;
+    /* More space below the input group */
+}
+
+#todo-input-group input,
+#todo-input-group textarea {
+    /* Style for all inputs and textarea within this group */
+    width: 100%;
+    /* Ensure they take full width when stacked */
+    margin-bottom: 0;
+    /* Remove default margin-bottom to rely on gap */
+}
+
+#todo-input-group button {
+    width: 100%;
+    /* Make add task button also full width */
+    padding: 15px 30px;
+    /* Adjust padding for add button */
+    font-size: 1.25rem;
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-item {
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    /* Even more rounded task blocks */
+    padding: 30px;
+    /* Make task blocks very big */
+    margin-bottom: 25px;
+    /* More space between tasks */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* More space within task item */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    /* Stronger shadow for tasks */
+}
+
+.todo-item:hover {
+    background-color: #F5F5F5;
+    /* Slightly darker white on hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+    /* Stronger lift */
+}
+
+.todo-item.completed {
+    opacity: 0.7;
+    text-decoration: line-through;
+    background-color: rgba(76, 175, 80, 0.12);
+    /* Slightly more prominent tint */
+    border-color: rgba(76, 175, 80, 0.35);
+}
+
+.todo-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    /* More space */
+}
+
+.todo-item-header h3 {
+    margin: 0;
+    color: var(--text-color);
+    font-weight: 700;
+    flex-grow: 1;
+    margin-right: 20px;
+    font-size: 1.8rem;
+    /* Make task names even bigger */
+}
+
+.todo-item-header .todo-timeline {
+    font-size: 1.1rem;
+    /* Bigger timeline text */
+    color: var(--accent-color);
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.todo-item-description {
+    font-size: 1.2rem;
+    /* Bigger description text */
+    color: #555555;
+    margin-top: 15px;
+    /* More space below task name */
+    white-space: pre-wrap;
+    /* Preserve whitespace and line breaks for description */
+}
+
+.todo-actions {
+    display: flex;
+    gap: 20px;
+    /* More space between action buttons */
+    margin-top: 25px;
+    /* More space from description */
+    justify-content: flex-end;
+}
+
+.todo-actions button {
+    width: auto;
+    padding: 12px 25px;
+    /* Adjust action button padding */
+    font-size: 1.1rem;
+    /* Action button text size */
+    border-radius: 12px;
+    box-shadow: none;
+}
+
+.todo-actions button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+
+.tab-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    /* More space below tabs */
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 18px;
+    /* More rounded tabs */
+    padding: 10px;
+    /* More padding */
+    border: 1px solid var(--border-color);
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tab-nav button {
+    flex: 1;
+    background-color: transparent;
+    color: var(--text-color);
+    border: none;
+    padding: 18px 25px;
+    /* Bigger tab buttons */
+    cursor: pointer;
+    font-size: 1.3rem;
+    /* Bigger tab text */
+    font-weight: 700;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    width: auto;
+    box-shadow: none;
+}
+
+.tab-nav button.active-tab {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tab-nav button:not(.active-tab):hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: var(--text-color);
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 992px) {
+    .container {
+        width: 95%;
+        padding: 50px 40px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    body {
+        font-size: 18px;
+    }
+
+    .motive-text {
+        font-size: 1.3rem;
+    }
+
+    .todo-item-header h3 {
+        font-size: 1.6rem;
+    }
+
+    .todo-item-description {
+        font-size: 1.1rem;
+    }
+
+    .tab-nav button {
+        font-size: 1.2rem;
+    }
+
+    input[type="email"],
+    input[type="password"],
+    input[type="text"],
+    input[type="date"],
+    textarea,
+    button {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+
+    #todo-input-group button {
+        padding: 12px 25px;
+    }
+
+    .todo-actions button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 40px 30px;
+        margin: 20px auto;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .motive-text {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+
+    .todo-item {
+        padding: 25px;
+    }
+
+    .todo-item-header h3 {
+        font-size: 1.4rem;
+    }
+
+    .todo-item-description {
+        font-size: 1rem;
+    }
+
+    .tab-nav button {
+        font-size: 1.1rem;
+    }
+
+    input[type="email"],
+    input[type="password"],
+    input[type="text"],
+    input[type="date"],
+    textarea,
+    button {
+        font-size: 1.1rem;
+        padding: 12px;
+    }
+
+    #todo-input-group button {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 30px 15px;
+        /* More padding on very small screens */
+        width: 95%;
+        /* Wider on small screens */
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+        margin-bottom: 20px;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    .motive-text {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+
+    input[type="email"],
+    input[type="password"],
+    input[type="text"],
+    input[type="date"],
+    textarea,
+    button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    textarea {
+        min-height: 100px;
+        /* Smaller min-height on small screens */
+    }
+
+    #todo-input-group {
+        gap: 15px;
+        /* Adjust gap for smaller screens */
+        margin-bottom: 30px;
+    }
+
+    #todo-input-group button {
+        padding: 10px;
+    }
+
+    .todo-item {
+        padding: 20px;
+        margin-bottom: 15px;
+    }
+
+    .todo-item-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .todo-item-header .todo-timeline {
+        font-size: 0.9rem;
+    }
+
+    .todo-item-description {
+        font-size: 0.95rem;
+    }
+
+    .todo-actions {
+        flex-direction: column;
+        /* Stack action buttons vertically */
+        gap: 10px;
+    }
+
+    .todo-actions button {
+        width: 100%;
+    }
+
+    .tab-nav {
+        flex-direction: column;
+        /* Stack tabs vertically on very small screens */
+        gap: 8px;
+        padding: 8px;
+        border-radius: 12px;
+    }
+
+    .tab-nav button {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
